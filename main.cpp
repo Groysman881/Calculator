@@ -10,7 +10,8 @@ int main()
 {
     Calculator calc;
     cout<<"Enter expression"<<endl;
-    char* expr = new char;
+    char* expr = new char[30];
+
     gets(expr);
     cout<<strlen(expr)<<endl;
     for(int i = 0;i < strlen(expr);i++){

@@ -15,6 +15,7 @@ bool tNode::isNumber(){
 }
 tNode::tNode(){
     token = new char;
+    token[0] = '\0';
     left = NULL;
     right = NULL;
     parent = NULL;

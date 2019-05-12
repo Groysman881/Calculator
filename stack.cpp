@@ -13,6 +13,7 @@ Stack::Stack()
 }
 void Stack::push(char *value){
     Node* new_node = new Node;
+    new_node->token[0] = '\0';
     strcat(new_node->token,value);
     new_node->past = top;
     top = new_node;
@@ -20,9 +21,11 @@ void Stack::push(char *value){
 }
 char* Stack::pop(){
     char* buf = new char;
+    Node* buf_node = top;
     strcat(buf,top->token);
     top = top->past;
     size--;
+    delete(buf_node);
     return(buf);
 }
 char* Stack::get_top(){

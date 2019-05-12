@@ -15,6 +15,7 @@ Queue::Queue()
 void Queue::push(char *value){
     std::cout<<"Push1"<<std::endl;
     qNode* new_node = new qNode;
+    new_node->token[0] = '\0';
     new_node->next = NULL;
     std::cout<<"okes"<<std::endl;
     strcat(new_node->token, value);
@@ -34,6 +35,7 @@ char* Queue::pop(){
 
 
     char* buf = new char;
+    qNode* buf_node = head;
     if(size > 0){
         strcat(buf,head->token);
         head = head->next;
@@ -43,7 +45,7 @@ char* Queue::pop(){
         std::cout<<"Error"<<std::endl;
         exit;
     }
-
+    delete(buf_node);
     return(buf);
 }
 char* Queue::get_head(){
