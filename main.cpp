@@ -23,6 +23,10 @@ int main()
         if(strcmp(buf,"0") == 0){
             continiue = 0;
         }
+        else if(strcmp(buf,"0") != 0){
+            cout<<"Incorrect enter"<<endl;
+            exit(0);
+        }
     }
     return 0;
 }
