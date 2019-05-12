@@ -7,9 +7,11 @@ Node::Node(){
 }
 Stack::Stack()
 {
-    std::cout<<"Stack"<<std::endl;
     size = 0;
     top = new Node;
+}
+Stack::~Stack(){
+    delete(top);
 }
 void Stack::push(char *value){
     Node* new_node = new Node;

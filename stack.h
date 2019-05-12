@@ -13,6 +13,7 @@ class Stack
 {
 public:
     Stack();
+    ~Stack();
     void push(char* value);
     char* pop();
     char* get_top();
