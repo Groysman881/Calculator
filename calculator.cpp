@@ -163,15 +163,6 @@ void Calculator::getPostfix(char *expr){
     while(_stack->get_size() > 0){      
         _queue->push(_stack->pop());
     }
-    /*char** mas = new char*;
-    std::cout<<"!?!"<<std::endl;
-    int size = _queue->get_size();
-    for(int i = 0;i < size;i++){
-
-        mas[i] = _queue->get_head();
-        std::cout<<mas[i];
-        _queue->pop();
-    }*/
 }
 void Calculator::getAST(){
     Stack* stack_num = new Stack;
